@@ -15,6 +15,17 @@ int gcd(int a, int b)
 	return gcd(b, a % b);
 }
 
+//GCD with brute force
+int gcdbruteForce(int a, int b) {
+    int gcd = 1;
+    for(int i = 2; i < min(a, b); ++i) {
+        if(a % i == 0 && b % i == 0) {
+            gcd = i;
+        }
+    }
+    return gcd;
+}
+
 //LCM using GCD
 int lcm(int a, int b)
 {
@@ -40,6 +51,7 @@ int main(int argc, char** argv)
 	sscanf(argv[3],"%d",&r);
     std::cout << "Hello World!\n";
 	std::cout << "GCD: " << gcd(a, b) << std::endl;
+	std::cout << "GCD with bruteforce: " << gcdbruteForce(a, b) << std::endl;
 	std::cout << "LCM: " << lcm(a, b) << std::endl;
 	std::cout << "Power Mod: "<< powermod(a,b) << std::endl;
 }
