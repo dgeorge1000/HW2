@@ -1,6 +1,6 @@
 // DataStruct1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#include <cassert
+#include <cassert>
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>
